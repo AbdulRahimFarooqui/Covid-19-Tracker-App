@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './Components/NavBar.js';
+import InfoPanel from './Components/InfoPanel.js';
+import FootNav from './Components/FootNav.js';
+// import Barchart from './Components/barCharts';
 
-function App() {
+export default function App() {
+  const screenconfig = React.useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+         <NavBar/>
+        <InfoPanel currentScreen={screenconfig[0]}/>
+        <FootNav screenCONFIG={screenconfig}/>
+        {/* <Barchart/>         */}
+      {/* </contextProvider> */}
+
+      {/* Make the 'MoreIcon' light green using color property. */}
     </div>
   );
-}
-
-export default App;
+  }
