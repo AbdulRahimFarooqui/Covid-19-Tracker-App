@@ -46,4 +46,4 @@ jobs:
     - name: Installing Surge
       run: sudo npm install -g surge
     - name: Deploying....
-      run: sudo surge ./build https://covid-19-Tracker.surge.sh --token ${{secrets.SURGE_KEY}}
+      run: sudo surge ./build https://my-project-covid-19-Tracker.surge.sh --token ${{secrets.SURGE_KEY}}
